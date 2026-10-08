@@ -1,0 +1,16 @@
+{
+  "name": "gd-arena",
+  "private": true,
+  "version": "0.0.1",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev:server": "npm -w apps/server run dev",
+    "dev:web": "npm -w apps/web run dev",
+    "typecheck": "npm -ws run typecheck --if-present",
+    "test": "npm -ws run test --if-present",
+    "build:web": "npm -w apps/web run build",
+    "build": "npm -w apps/web run build",
+    "start:server": "NODE_ENV=production npm -w apps/server run start",
+    "start:prod": "npm run build && NODE_ENV=production npm -w apps/server run start"
+  }
+}
